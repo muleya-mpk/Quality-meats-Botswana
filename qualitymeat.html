@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quality Meat Botswana | Wholesale, Retail &amp; Processed Meat</title>
+<link rel="icon" type="image/jpeg" href="1000853005.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#161414;
+    --black-soft:#262222;
+    --red:#C8102E;
+    --red-dark:#8F0B20;
+    --white:#FFFFFF;
+    --offwhite:#F7F5F2;
+    --gray:#55504C;
+    --line:#E3DEDA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--white);color:var(--black);font-family:'Work Sans',sans-serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1px;}
+  a{color:inherit;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+
+  /* ── HEADER ── */
+  header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:4px solid var(--black);}
+  .header-inner{max-width:1140px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .brand-logo{display:flex;align-items:center;text-decoration:none;}
+  .brand-logo img{height:48px;width:auto;}
+  nav{display:flex;align-items:center;gap:26px;}
+  nav a{text-decoration:none;font-size:0.85rem;font-weight:600;color:var(--black);text-transform:uppercase;letter-spacing:0.5px;transition:color 0.2s;}
+  nav a:hover{color:var(--red);}
+  .nav-call{
+    background:var(--red);color:var(--white)!important;padding:10px 20px;
+    font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:1px;
+  }
+  .nav-call:hover{background:var(--red-dark);}
+
+  /* ── HERO ── */
+  .hero{background:var(--black);color:var(--white);position:relative;overflow:hidden;padding:76px 0 92px;}
+  .hero::before{
+    content:"";position:absolute;top:0;right:-10%;width:60%;height:100%;
+    background:var(--red);clip-path:polygon(40% 0,100% 0,100% 100%,0% 100%);
+    opacity:0.95;
+  }
+  .hero-inner{position:relative;z-index:1;max-width:640px;}
+  .seal{
+    display:inline-flex;align-items:center;gap:10px;
+    border:2px solid var(--white);padding:8px 16px;margin-bottom:26px;
+    font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;
+  }
+  .seal strong{color:var(--red);background:var(--white);padding:2px 8px;font-family:'Bebas Neue',sans-serif;letter-spacing:1px;}
+  .hero h1{font-size:clamp(3.2rem,7vw,5.6rem);line-height:0.95;margin-bottom:20px;}
+  .hero h1 span{color:var(--red);-webkit-text-stroke:2px var(--white);}
+  .hero p.lede{font-size:1.05rem;color:#E4DEDA;max-width:480px;margin-bottom:34px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:1px;transition:all 0.2s;}
+  .btn-white{background:var(--white);color:var(--black);}
+  .btn-white:hover{background:var(--offwhite);}
+  .btn-outline-w{border:2px solid var(--white);color:var(--white);}
+  .btn-outline-w:hover{background:var(--white);color:var(--black);}
+
+  /* ── SECTION SHARED ── */
+  section{padding:70px 0;}
+  .sec-head{max-width:560px;margin-bottom:40px;}
+  .sec-head .kicker{color:var(--red);font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block;}
+  .sec-head h2{font-size:clamp(2.2rem,4.2vw,3.2rem);line-height:1;}
+  .sec-head p{color:var(--gray);margin-top:12px;}
+
+  /* ── ABOUT / HISTORY ── */
+  #about{background:var(--white);}
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
+  .about-grid p{color:var(--gray);margin-bottom:16px;max-width:480px;}
+  .fact-strip{border-top:3px solid var(--black);}
+  .fact-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);gap:16px;}
+  .fact-row .k{font-size:0.82rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.3px;}
+  .fact-row .v{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.5px;text-align:right;}
+
+  /* ── PRODUCTS ── */
+  #products{background:var(--offwhite);}
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .product{background:var(--white);border:1px solid var(--line);position:relative;padding:28px 24px;transition:border-color 0.2s;}
+  .product:hover{border-color:var(--red);}
+  .product .tag{
+    position:absolute;top:0;right:0;background:var(--red);color:var(--white);
+    font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    padding:5px 12px;
+  }
+  .product .ic{width:46px;height:46px;color:var(--red);margin-bottom:18px;}
+  .product h3{font-size:1.5rem;margin-bottom:8px;letter-spacing:0.5px;}
+  .product p{font-size:0.88rem;color:var(--gray);}
+
+  /* ── RECOGNITION ── */
+  #recognition{background:var(--black);color:var(--white);}
+  #recognition .sec-head h2{color:var(--white);}
+  #recognition .sec-head p{color:#C9C2BB;}
+  .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,0.18);margin-bottom:48px;}
+  .stat{padding:26px 18px;text-align:center;border-right:1px solid rgba(255,255,255,0.18);}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--red);line-height:1;}
+  .stat .lbl{font-size:0.75rem;color:#C9C2BB;margin-top:8px;text-transform:uppercase;letter-spacing:0.5px;}
+  .accolades{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .accolade{border-left:3px solid var(--red);padding:4px 0 4px 18px;}
+  .accolade h4{font-size:1.2rem;margin-bottom:8px;letter-spacing:0.5px;}
+  .accolade p{font-size:0.86rem;color:#C9C2BB;}
+
+  /* ── WHERE TO BUY ── */
+  #stockists{background:var(--white);}
+  .factory-card{
+    background:var(--offwhite);border-left:5px solid var(--red);
+    padding:26px 28px;margin-bottom:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  }
+  .factory-card h3{font-size:1.5rem;margin-bottom:10px;}
+  .factory-card p{font-size:0.9rem;color:var(--gray);margin-bottom:6px;}
+  .factory-card .transport{font-size:0.84rem;color:var(--red);font-weight:600;margin-top:10px;}
+  .region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;}
+  .region{padding-bottom:26px;margin-bottom:26px;border-bottom:1px solid var(--line);}
+  .region h4{font-size:1.15rem;color:var(--red);margin-bottom:12px;letter-spacing:0.5px;}
+  .region ul{list-style:none;}
+  .region li{font-size:0.9rem;padding:5px 0;color:var(--black);border-bottom:1px dashed var(--line);}
+  .region li:last-child{border-bottom:none;}
+
+  /* ── CONTACT ── */
+  #contact{background:var(--offwhite);}
+  .contact-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact-group h4{font-size:1.2rem;color:var(--red);margin-bottom:16px;letter-spacing:0.5px;}
+  .cbtn{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    background:var(--white);border:2px solid var(--black);
+    padding:14px 18px;text-decoration:none;color:var(--black);
+    font-weight:600;font-size:0.92rem;margin-bottom:10px;transition:all 0.2s;
+  }
+  .cbtn:hover{background:var(--black);color:var(--white);transform:translateX(4px);}
+  .cbtn .name{display:flex;flex-direction:column;}
+  .cbtn .name small{font-size:0.72rem;color:var(--gray);font-weight:500;text-transform:uppercase;letter-spacing:0.3px;}
+  .cbtn:hover .name small{color:#C9C2BB;}
+  .cbtn .arrow{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--red);}
+  .social-row{display:flex;gap:12px;margin-top:8px;}
+  .social-btn{
+    display:flex;align-items:center;gap:10px;background:var(--black);color:var(--white);
+    padding:13px 20px;text-decoration:none;font-weight:600;font-size:0.88rem;transition:background 0.2s;
+  }
+  .social-btn:hover{background:var(--red);}
+  .social-btn svg{width:18px;height:18px;}
+  .email-btn{
+    display:flex;align-items:center;gap:10px;background:var(--red);color:var(--white);
+    padding:14px 20px;text-decoration:none;font-weight:700;font-size:0.92rem;margin-top:6px;
+  }
+  .email-btn:hover{background:var(--red-dark);}
+
+  /* ── FOOTER ── */
+  footer{background:var(--black);color:#C9C2BB;padding:44px 0 24px;border-top:6px solid var(--red);}
+  .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;padding-bottom:26px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.12);}
+  .footer-logo-chip{display:inline-block;background:var(--white);padding:10px 16px;margin-bottom:14px;}
+  .footer-logo-chip img{height:34px;width:auto;display:block;}
+  .footer-brand p{max-width:280px;font-size:0.85rem;color:#9C9590;}
+  .footer-col h5{color:var(--red);font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;font-weight:700;}
+  .footer-col p,.footer-col a{display:block;font-size:0.88rem;color:#C9C2BB;text-decoration:none;margin-bottom:8px;}
+  .footer-col a:hover{color:var(--red);}
+  .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#766F69;}
+
+  /* ── RESPONSIVE ── */
+  @media (max-width:880px){
+    nav{display:none;}
+    .hero::before{width:100%;opacity:0.12;clip-path:none;}
+    .about-grid{grid-template-columns:1fr;}
+    .product-grid{grid-template-columns:1fr 1fr;}
+    .stat-strip{grid-template-columns:1fr 1fr;}
+    .stat{border-bottom:1px solid rgba(255,255,255,0.18);}
+    .accolades{grid-template-columns:1fr;}
+    .factory-card{grid-template-columns:1fr;}
+    .region-grid{grid-template-columns:1fr 1fr;}
+    .contact-cols{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .product-grid{grid-template-columns:1fr;}
+    .region-grid{grid-template-columns:1fr;}
+    .fact-row{flex-direction:column;align-items:flex-start;gap:2px;}
+    .fact-row .v{text-align:left;}
+    .stat-strip{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand-logo"><img src="1000853005.jpg" alt="Quality Meat Botswana logo"></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#stockists">Where to Buy</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+2673937169" class="nav-call">Call Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div id="top" class="hero">
+  <div class="wrap hero-inner">
+    <div class="seal">Est. <strong>1998</strong> &nbsp;&middot;&nbsp; Proudly Botswana</div>
+    <h1>QUALITY YOU<br>CAN <span>TRUST</span></h1>
+    <p class="lede">Quality Meat is a Gaborone-based wholesale, retail and processed meat manufacturer &mdash; supplying fresh beef, mutton, pork and processed products to customers at our factory and select supermarkets across Botswana.</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn btn-white">Our Products</a>
+      <a href="#stockists" class="btn btn-outline-w">Visit Factory Shop</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT / HISTORY -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:18px;">
+        <span class="kicker">Our Story</span>
+        <h2>Vertically integrated,<br>since 1998</h2>
+      </div>
+      <p>Quality Meat (Pty) Ltd has been part of Botswana's meat industry since 1998. As a vertically integrated business, we handle the full chain ourselves &mdash; from sourcing livestock through to wholesale, retail and processed meat &mdash; so quality stays consistent at every step.</p>
+      <p>We source primarily from Botswana's communal and commercial farms, supporting local producers directly, and sell both at our Gaborone factory shop and through supermarkets around the country.</p>
+    </div>
+    <div class="fact-strip">
+      <div class="fact-row"><span class="k">Established</span><span class="v">1998</span></div>
+      <div class="fact-row"><span class="k">Based in</span><span class="v">Broadhurst, Gaborone</span></div>
+      <div class="fact-row"><span class="k">Business type</span><span class="v">Wholesale &middot; Retail &middot; Processed</span></div>
+      <div class="fact-row"><span class="k">Sourcing</span><span class="v">Local Botswana farms</span></div>
+      <div class="fact-row"><span class="k">Registration</span><span class="v">CIPA registered</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">What We Supply</span>
+      <h2>Fresh, processed<br>&amp; bulk</h2>
+      <p>From everyday cuts to 100kg+ bulk orders &mdash; all processed under our in-house quality assurance system.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product">
+        <span class="tag">Fresh</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 12c0-4 3-8 9-8 4 0 6 3 6 6 0 4-3 6-6 6-2 0-3-1-4-1-2 0-3 2-5 2-2 0-2-2-2-3 0-1 1-2 2-2z"/></svg>
+        <h3>Fresh Beef Cuts</h3>
+        <p>A full range of beef cuts, sourced from local Botswana farms and processed fresh at our Gaborone factory.</p>
+      </div>
+
+      <div class="product">
+        <span class="tag">Fresh</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="11" r="7"/><path d="M8 18l-1 3M16 18l1 3M12 18v3"/></svg>
+        <h3>Mutton &amp; Lamb</h3>
+        <p>Quality mutton and lamb cuts, prepared to the same standard as the rest of our range.</p>
+      </div>
+
+      <div class="product">
+        <span class="tag">Fresh</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="12" cy="12" rx="8" ry="6"/><circle cx="8" cy="10" r="1" fill="currentColor"/></svg>
+        <h3>Pork</h3>
+        <p>Fresh pork cuts including favourites like cubed pork, ready for stews, curries and more.</p>
+      </div>
+
+      <div class="product">
+        <span class="tag">Processed</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8c0-2 2-3 4-2s2 4 4 3 2-4 4-3 2 4 4 2M4 16c0-2 2-3 4-2s2 4 4 3 2-4 4-3 2 4 4 2"/></svg>
+        <h3>Processed &amp; Boerewors</h3>
+        <p>In-house processed meat products including boerewors and other prepared favourites.</p>
+      </div>
+
+      <div class="product">
+        <span class="tag">Prepared</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 10h16l-1 9H5z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <h3>Stews &amp; Cubed Meats</h3>
+        <p>Pre-cubed meats ready for stews and curries &mdash; tender, flavourful, and quick to cook.</p>
+      </div>
+
+      <div class="product">
+        <span class="tag">Wholesale</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/></svg>
+        <h3>Bulk &amp; Wholesale</h3>
+        <p>Orders of 100kg and above handled directly by our bulk sales team &mdash; see contacts below.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section id="recognition">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" style="color:var(--red);">Recognition</span>
+      <h2>Quality, backed up</h2>
+      <p>Built on food safety standards, local sourcing, and a track record the community trusts.</p>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat"><div class="num">1998</div><div class="lbl">Trading since</div></div>
+      <div class="stat"><div class="num">26K+</div><div class="lbl">Facebook community</div></div>
+      <div class="stat"><div class="num">4,000kg</div><div class="lbl">Meat donated, COVID relief</div></div>
+      <div class="stat"><div class="num">17</div><div class="lbl">Retail access points</div></div>
+    </div>
+
+    <div class="accolades">
+      <div class="accolade">
+        <h4>Food Safety Certified</h4>
+        <p>Our quality assurance system is built on HACCP and ISO 22000 / FSSC 22000-based standards, registered with CIPA and compliant with Botswana's Meat Control Act.</p>
+      </div>
+      <div class="accolade">
+        <h4>Community Relief</h4>
+        <p>Donated meat worth over P170,000 to the COVID-19 Relief Fund, supporting residents in Kgatleng, Tlokweng and Mogoditshane.</p>
+      </div>
+      <div class="accolade">
+        <h4>Proudly Local</h4>
+        <p>We source primarily from Botswana's own communal and commercial farms &mdash; backing local producers with every order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO BUY -->
+<section id="stockists">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Where to Buy</span>
+      <h2>Factory shop<br>&amp; stockists</h2>
+    </div>
+
+    <div class="factory-card">
+      <div>
+        <h3>Factory Shop</h3>
+        <p>Plot 13096, Cnr Lejara / Moporoporo Road</p>
+        <p>Broadhurst Industrial, Gaborone, Botswana</p>
+        <p class="transport">Directly opposite the Council, near Botswana Government Printing. Catch the Broadhurst Route 3 combi &mdash; it drops right at our door.</p>
+      </div>
+      <div>
+        <h3>Factory Contact</h3>
+        <p>Switchboard: 393 7169</p>
+        <p>Email: sales@qualitymeat.co.bw</p>
+      </div>
+    </div>
+
+    <div class="region-grid">
+      <div class="region">
+        <h4>Shoppers</h4>
+        <ul>
+          <li>Tlokweng</li>
+          <li>G-West</li>
+          <li>Mogoditshane</li>
+          <li>Nkoyaphiri</li>
+          <li>Kanye</li>
+          <li>Mahalapye</li>
+          <li>Palapye</li>
+          <li>Orapa</li>
+          <li>Letlhakane</li>
+          <li>Selebi-Phikwe</li>
+          <li>Tonota</li>
+        </ul>
+      </div>
+      <div class="region">
+        <h4>Spar</h4>
+        <ul>
+          <li>Mogoditshane</li>
+          <li>G-West</li>
+          <li>Pula Spar</li>
+          <li>Tswana Spar, Block 3</li>
+        </ul>
+      </div>
+      <div class="region">
+        <h4>Sefalana Hyper</h4>
+        <ul>
+          <li>Francistown</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Get In Touch</span>
+      <h2>Contact us</h2>
+    </div>
+
+    <div class="contact-cols">
+      <div class="contact-group">
+        <h4>General Enquiries</h4>
+        <a href="tel:+2673937169" class="cbtn"><div class="name">Switchboard<small>393 7169</small></div><span class="arrow">&rarr;</span></a>
+        <a href="tel:+26771260137" class="cbtn"><div class="name">Management<small>71 260 137</small></div><span class="arrow">&rarr;</span></a>
+        <a href="tel:+26771466987" class="cbtn"><div class="name">Sega<small>71 466 987</small></div><span class="arrow">&rarr;</span></a>
+        <a href="tel:+26775774556" class="cbtn"><div class="name">Gloria<small>75 774 556</small></div><span class="arrow">&rarr;</span></a>
+        <a href="mailto:sales@qualitymeat.co.bw" class="email-btn">&#9993; sales@qualitymeat.co.bw</a>
+      </div>
+
+      <div class="contact-group">
+        <h4>Bulk Sales &mdash; 100kg and Above</h4>
+        <a href="tel:+26772396447" class="cbtn"><div class="name">Karabo<small>72 396 447</small></div><span class="arrow">&rarr;</span></a>
+        <a href="tel:+26775687845" class="cbtn"><div class="name">Jerry<small>75 687 845</small></div><span class="arrow">&rarr;</span></a>
+        <a href="tel:+26775431105" class="cbtn"><div class="name">Olebogan<small>75 431 105</small></div><span class="arrow">&rarr;</span></a>
+        <a href="tel:+26775989303" class="cbtn"><div class="name">Kelebogile<small>75 989 303</small></div><span class="arrow">&rarr;</span></a>
+
+        <div class="social-row">
+          <a href="https://www.facebook.com/qualitymeatbw" target="_blank" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.tiktok.com/@quality.meat.botswana" target="_blank" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-1-1-1.6-2.33-1.6-3.82h-3.45v13.72c0 1.74-1.4 3.14-3.14 3.14a3.14 3.14 0 0 1-3.14-3.14 3.14 3.14 0 0 1 3.14-3.14c.3 0 .58.04.85.12v-3.52c-.28-.04-.56-.06-.85-.06a6.6 6.6 0 0 0-6.6 6.6 6.6 6.6 0 0 0 6.6 6.6 6.6 6.6 0 0 0 6.6-6.6V9.01a9.5 9.5 0 0 0 5.5 1.76V7.33c-1.5 0-2.9-.57-3.91-1.51z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-chip"><img src="1000853005.jpg" alt="Quality Meat Botswana logo"></div>
+        <p>Wholesale, retail and processed meat manufacturer, Gaborone, Botswana. Quality you can trust since 1998.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <p>Plot 13096, Cnr Lejara/Moporoporo</p>
+        <p>Broadhurst Industrial, Gaborone</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#stockists">Where to Buy</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://www.facebook.com/qualitymeatbw" target="_blank">Facebook</a>
+        <a href="https://www.tiktok.com/@quality.meat.botswana" target="_blank">TikTok</a>
+        <a href="mailto:sales@qualitymeat.co.bw">sales@qualitymeat.co.bw</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Quality Meat (Pty) Ltd. All rights reserved.</p>
+      <p>Proudly Botswana, Proudly Quality Meat.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
